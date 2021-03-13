@@ -1,0 +1,11 @@
+<br><br>
+<%= form_with(url:'/static_pages', method: 'get') do |f| %>
+  <%= f.text_field :user %>
+  <%= f.submit %>
+<% end %>
+
+<% if @images %>
+  <%= @images.each do |img| %>
+    <%= image_tag img.url_n, loading: 'lazy' %>
+  <% end %>
+<% end %>
