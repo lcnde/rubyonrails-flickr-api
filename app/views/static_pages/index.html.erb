@@ -5,7 +5,18 @@
 <% end %>
 
 <% if @images %>
-  <%= @images.each do |img| %>
-    <%= image_tag img.url_n, loading: 'lazy' %>
-  <% end %>
+  <% @images.each do |img| %>
+  <br>
+    <%= image_tag Flickr.url(img), loading: 'lazy' %>
+   <%end%>
 <% end %>
+
+
+
+  <% flash.each do |type, msg| %>
+  <br>
+    <div style="color:red">
+      <%= msg %>
+    </div>
+    <br>
+  <% end %>
