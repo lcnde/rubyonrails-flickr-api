@@ -1,6 +1,6 @@
-<br><br>
+<h1>This is "<%= params[:user] %>" profile</h1>
 <%= form_with(url:'/static_pages', method: 'get') do |f| %>
-  <%= f.text_field :user %>
+  <%= f.text_field :user, value: params[:user] %>
   <%= f.submit %>
 <% end %>
 
